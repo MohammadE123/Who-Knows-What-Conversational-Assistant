@@ -7,6 +7,10 @@ from langchain.chains import GraphCypherQAChain
 from langchain.prompts.prompt import PromptTemplate
 from langchain.chains.llm import LLMChain
 from langchain_ollama import OllamaLLM
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Initialize LLM
 llm = OllamaLLM(model="llama3.2")
