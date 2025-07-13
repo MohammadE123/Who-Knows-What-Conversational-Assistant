@@ -7,15 +7,18 @@ import glob
 from timeit import default_timer as timer
 from dotenv import load_dotenv
 from time import sleep
+from ollama import chat
+
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 #Neo4j configuration
 neo4j_url = os.getenv("NEO4J_CONNECTION_URL")
 neo4j_user = os.getenv("NEO4J_USER")
 neo4j_password = os.getenv("NEO4J_PASSWORD")
 gds = GraphDatabase.driver(neo4j_url, auth=(neo4j_user, neo4j_password))
-
-from ollama import chat
-from time import sleep
 
 def process_llama(file_prompt, system_msg):
     conversation = [
