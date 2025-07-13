@@ -10,7 +10,7 @@ from langchain_ollama import OllamaLLM
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv()
+load_dotenv("neo4j.env")
 
 # Initialize LLM
 llm = OllamaLLM(model="llama3.2")
