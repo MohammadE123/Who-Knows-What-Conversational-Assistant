@@ -12,7 +12,7 @@ from ollama import chat
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv()
+load_dotenv("neo4j.env")
 
 #Neo4j configuration
 neo4j_url = os.getenv("NEO4J_CONNECTION_URL")
