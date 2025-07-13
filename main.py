@@ -11,10 +11,10 @@ from langchain_ollama import OllamaLLM
 # Initialize LLM
 llm = OllamaLLM(model="llama3.2")
 
-# Neo4j configuration
-neo4j_url = "neo4j://127.0.0.1:7687"
-neo4j_user = "neo4j"
-neo4j_password = "12345678"
+#Neo4j configuration
+neo4j_url = os.getenv("NEO4J_CONNECTION_URL")
+neo4j_user = os.getenv("NEO4J_USER")
+neo4j_password = os.getenv("NEO4J_PASSWORD")
 
 # Classification prompt
 classification_prompt = PromptTemplate(
