@@ -148,7 +148,7 @@ streamlit run main.py
 
 ### 7. Start Asking Questions!
 
-The interface should now be visible (see picture below) — you're all set to start chatting with the assistant!
+Once the app is running, a new browser window should automatically open (see picture below) — you're all set to start chatting with the assistant!
 
 <p align="center">
   <img width="1023" height="424" alt="image" src="https://github.com/user-attachments/assets/0be17f5c-dc2b-4b2e-9391-7051aa7ab3cc" />
