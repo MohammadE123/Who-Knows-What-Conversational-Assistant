@@ -128,3 +128,4 @@ You can now interact with the assistant:
   - The chat history.
   - The Cypher query used (if applicable).
   - The response from the LLM.
+*** when referencing names make sure to include the full name with proper capitalization, otherwise the query may be unsuccessful
