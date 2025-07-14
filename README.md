@@ -127,7 +127,10 @@ MATCH (n) OPTIONAL MATCH (n)-[r]->(m) RETURN n, r, m
 ```
 It should look something like:
 
-<img width="556" height="479" alt="Screenshot 2025-07-13 182001" src="https://github.com/user-attachments/assets/3597fe26-40b8-4e2e-8d10-e8e1ed788f58" />
+<p align="center">
+  <img width="556" height="479" alt="Screenshot 2025-07-13 182001" src="https://github.com/user-attachments/assets/3597fe26-40b8-4e2e-8d10-e8e1ed788f58" />
+</p>
+
 
 > This is a one-time setup step.
 
