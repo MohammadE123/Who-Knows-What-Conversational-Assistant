@@ -162,3 +162,5 @@ The interface should now be visible (see picture below) — you're all set to st
   - The inference time 
    
 > when referencing names make sure to include the full name with proper capitalization, otherwise the query may be unsuccessful
+
+Feel free to reach out to me at: mohammad.elmougey@gmail.com. Im always happy to talk. 
