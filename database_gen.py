@@ -1,5 +1,4 @@
 import os
-import ollama
 from string import Template
 import json
 from neo4j import GraphDatabase
