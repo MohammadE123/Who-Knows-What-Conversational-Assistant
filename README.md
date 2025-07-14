@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 Neo4j is used to create a local knowledge graph that the LLM can query.
 
-- Download Neo4j Desktop: Neo4j Official Site
+- Download Neo4j Desktop: [Neo4j Official Site](https://neo4j.com/)
 - Create a Database Instance:
   - Click **"Create"** in the top right.
   - Set a **name** and **password** (default username is `neo4j`).
@@ -64,13 +64,13 @@ Neo4j is used to create a local knowledge graph that the LLM can query.
   - Click the **Play** button.
   - Wait until the status shows **Running** in green.
 
-📚 For more details, refer to the Neo4j Documentation.
+📚 For more details, refer to the [Neo4j Documentation.](https://neo4j.com/docs/)
 
 #### c. Install Ollama
 
 Ollama is a tool for running large language models entirely on-device.
 
-- Install Ollama: Ollama GitHub
+- Install Ollama: [Ollama GitHub]([https://github.com/ollama/ollama?tab=readme-ov-file)
 - Install the LLM Phi-4 (for the database generation) and llama3.2 for the apps llm:
   
 > The Phi-4 model has a higher number of parameters than LLaMA 3.2, making it more powerful for generating the knowledge graph and delivering more accurate results.
