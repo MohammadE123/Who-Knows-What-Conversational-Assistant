@@ -12,18 +12,33 @@ Follow these steps to get the app up and running locally:
 
 ```bash
 git clone https://github.com/MohammadE123/Who-Knows-What-Conversational-Assistant.git
-cd who-knows-what
+cd Who-Knows-What-Conversational-Assistant
 ```
 
 ---
 
 ### 2. Install Dependencies
 
-#### a. Install Python Packages
+#### a. Set Up a Virtual Environment and Install Python Packages
+
+It's recommended to use a virtual environment to manage dependencies.
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
+```
+
+Then install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
+
 
 #### b. Set Up Neo4j Desktop
 
