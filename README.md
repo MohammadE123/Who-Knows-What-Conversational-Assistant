@@ -70,7 +70,7 @@ Neo4j is used to create a local knowledge graph that the LLM can query.
 
 Ollama is a tool for running large language models entirely on-device.
 
-- Install Ollama: [Ollama GitHub]([https://github.com/ollama/ollama?tab=readme-ov-file)
+- Install Ollama: [Ollama GitHub](https://github.com/ollama/ollama)
 - Install the LLM Phi-4 (for the database generation) and llama3.2 for the apps llm:
   
 > The Phi-4 model has a higher number of parameters than LLaMA 3.2, making it more powerful for generating the knowledge graph and delivering more accurate results.
