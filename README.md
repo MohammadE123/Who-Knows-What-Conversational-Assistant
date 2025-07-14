@@ -101,7 +101,7 @@ For this tutorial, we’ll use the provided dummy data.
 Open the `neo4j.env` file in the root directory and replace the following with your credentials:
 
 ```env
-NEO4J_URI=bolt:"your uri"
+NEO4J_URI="your uri"
 NEO4J_USERNAME="your username"
 NEO4J_PASSWORD="your password"
 
