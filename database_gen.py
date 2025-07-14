@@ -290,7 +290,7 @@ $ctext
 
 
 folders = {
-    #"people_profiles": people_prompt_template,
+    "people_profiles": people_prompt_template,
     "project_briefs": project_prompt_template,
     "slack_messages": slack_prompt_template
 }
