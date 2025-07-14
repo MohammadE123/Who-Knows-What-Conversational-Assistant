@@ -7,14 +7,15 @@ from langchain.chains import GraphCypherQAChain
 from langchain.prompts.prompt import PromptTemplate
 from langchain.chains.llm import LLMChain
 from langchain_ollama import OllamaLLM
-from dotenv import load_dotenv
 import os
-
-# Load environment variables
-load_dotenv("neo4j.env")
 
 # Initialize LLM
 llm = OllamaLLM(model="llama3.2")
+
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv("neo4j.env")
 
 #Neo4j configuration
 neo4j_url = os.getenv("NEO4J_CONNECTION_URL")
@@ -38,6 +39,9 @@ classifier_chain = LLMChain(llm=llm, prompt=classification_prompt)
 # Cypher generation prompt
 cypher_generation_template = """
 You are an expert Neo4j Cypher translator who converts English to Cypher based on the Neo4j Schema provided, following the instructions below:
+
+DO NOT ANSWER WITH CONVERSATIONAL TEXT IT SHOULD ONLY BE CYPHER QUERIES
+
 1. Generate Cypher query compatible ONLY for Neo4j Version 5
 2. Do not use EXISTS, SIZE, or HAVING keywords in the cypher. Use alias when using the WITH keyword
 3. Use only Nodes and relationships mentioned in the schema
@@ -55,16 +59,14 @@ You are an expert Neo4j Cypher translator who converts English to Cypher based o
 
    Never leave a node unwrapped in a pattern.
 
-
+   8. Ensure all queries ALWAYS end with a RETURN clause like the examples below
+   9. if you are every refering to a name always use the "id" property and not name
 
 schema: {schema}
 
 Use the following examples to guide your Cypher query generation:
 
-1. People and Their Skills/Technologies
----------------------------------------
-MATCH (p:Person)-[:HAS_SKILLS]->(t:Technology)
-RETURN p.name, t.name
+If you are going to Query for people's names make sure that for anywhere u are writing the persons name for the cypher query both their first name and last name's first letters are capitalized
 
 2. Projects and Their People/Clients
 ------------------------------------
@@ -96,7 +98,7 @@ RETURN c.name, pr.name
 
 6. Advanced Filtering
 ---------------------
-If you want to find technologies for a specific person (e.g., by name for a person named Liam Thompson):
+use this when asked to find technologies or skills for a specific person (e.g., by name for a person named Liam Thompson):
 MATCH (p:Person)-[:HAS_SKILLS]->(t:Technology)
 WHERE toLower(p.name) CONTAINS 'liam thompson'
 RETURN p.name, t.name
@@ -107,6 +109,10 @@ WHERE toLower(p.name) CONTAINS 'api gateway'
 RETURN p.name, t.name
 
 and do not return anything but the cypher query!
+
+
+
+
 
 
 Question: {question}
