@@ -73,13 +73,14 @@ Ollama is a tool for running large language models entirely on-device.
 - Install Ollama: Ollama GitHub
 - Install the LLM Phi-4 (for the database generation) and llama3.2 for the apps llm:
   
-> The Phi-4 model has more parameters than llama3.2 and gave better results when generating the database
+> The Phi-4 model has a higher number of parameters than LLaMA 3.2, making it more powerful for generating the knowledge graph and delivering more accurate results.
 
 ```bash
 ollama run phi4
+ollama run llama3.2
 ```
 
-This will download the model and open a chatbot (which you can close). The model is now ready for use.
+This will download the models and open a chatbot (which you can close). The models are now ready for use.
 
 ---
 
