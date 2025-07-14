@@ -11,7 +11,7 @@ Follow these steps to get the app up and running locally:
 ### 1. Clone this Repository
 
 ```bash
-git clone https://github.com/your-username/who-knows-what.git
+git clone https://github.com/MohammadE123/Who-Knows-What-Conversational-Assistant
 cd who-knows-what
 ```
 
