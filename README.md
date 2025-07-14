@@ -163,4 +163,28 @@ Once the app is running, a new browser window should automatically open (see pic
    
 > when referencing names make sure to include the full name with proper capitalization, otherwise the query may be unsuccessful
 
+##  Techincal Details
+
+This project uses a large language model (LLM) for two key purposes: generating a knowledge graph from unstructured data and powering a conversational assistant that queries this graph to provide meaningful insights. The database is built using Neo4j, a graph database that visually represents relationships between people, projects, and skills. To align with edge computing principles, a local Neo4j instance is used, keeping all data processing on-device.
+
+To build the graph, the LLM analyzes documents and extracts structured information into two dictionaries—entities and relationships. These are converted into Cypher queries and executed in Neo4j to create the graph. The Phi-4 model (14B parameters) is used for this step due to its superior extraction capabilities compared to the smaller LLaMA 3.2 model (3B parameters), which is used for the assistant itself.
+
+### System Architecture
+
+<p align="center">
+  <img width="1288" height="865" alt="image" src="https://github.com/user-attachments/assets/76b1cab8-402d-4ec8-b5c8-23c02d433ebc" />
+</p>
+
+The assistant consists of three main components: the front end, application logic, and data layer as is seen in the picture above. The front end is built with Streamlit, offering a simple UI for chatting with the assistant (usecase flowchart shown below), viewing past interactions, and checking inference times. The application logic uses the Ollama framework to run the LLaMA 3.2 model locally, orchestrated by a LangChain agent that handles prompt generation, query conversion, and response formatting. The Neo4j database serves as the data layer, storing all nodes and relationships.
+
+### Usecase Flowchart
+
+<p align="center">
+  <img width="686" height="818" alt="image" src="https://github.com/user-attachments/assets/d6c05745-fade-404d-bd8d-b9c19e556df4" />
+</p>
+
+Looking ahead, future improvements include leveraging the X Elite’s NPU for faster inference and exploring graph embeddings to enhance the relevance of search results within the knowledge graph.
+
+
+
 Feel free to reach out to me at: mohammad.elmougey@gmail.com or via [linkedin](https://www.linkedin.com/in/mohammad-elmougey/) Im always happy to talk. 
