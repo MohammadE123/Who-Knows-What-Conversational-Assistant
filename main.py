@@ -167,7 +167,7 @@ title_col, _, img_col = st.columns([2, 1, 2])
 with title_col:
     st.title("\"Who Knows What\" Conversational Assistant")
 with img_col:
-    st.image("Screenshot 2025-07-13 171348.png", width=500)
+    st.image("haqathon.png", width=500)
 
 user_input = st.text_input("Enter your question", key="input")
 if user_input:
