@@ -1,10 +1,10 @@
-# 🧠 "Who Knows What" Conversational Assistant
+# "Who Knows What" Conversational Assistant
 
 "Who Knows What" is an AI-powered assistant designed to help interns, new hires, and team members quickly identify who in the organization has expertise in specific skills or has worked on particular projects. By building a knowledge graph from internal documents, this app provides a high-level view of your company’s structure and expertise, reducing time spent tracking down the right person.
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 Follow these steps to get the app up and running locally:
 
