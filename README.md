@@ -17,9 +17,10 @@ cd Who-Knows-What-Conversational-Assistant
 
 ---
 
-### 2. Install Dependencies
-
 #### a. Set Up a Virtual Environment and Install Python Packages
+
+> ⚠️ **Note:** Make sure you're using the **Python x86 (Intel/AMD)** version. The **ARM version** caused compatibility issues with certain dependencies.  
+> ✅ This app was built and tested using **Python 3.10**, which is recommended for best compatibility.
 
 It's recommended to use a virtual environment to manage dependencies.
 
@@ -38,6 +39,7 @@ Then install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
+
 
 
 #### b. Set Up Neo4j Desktop
