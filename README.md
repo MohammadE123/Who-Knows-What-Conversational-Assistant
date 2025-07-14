@@ -163,4 +163,4 @@ Once the app is running, a new browser window should automatically open (see pic
    
 > when referencing names make sure to include the full name with proper capitalization, otherwise the query may be unsuccessful
 
-Feel free to reach out to me at: mohammad.elmougey@gmail.com or via [linked](www.linkedin.com/in/mohammad-elmougey) Im always happy to talk. 
+Feel free to reach out to me at: mohammad.elmougey@gmail.com or via [linkedin](https://www.linkedin.com/in/mohammad-elmougey/) Im always happy to talk. 
